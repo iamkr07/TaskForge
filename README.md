@@ -1,52 +1,67 @@
-# Project Management System
+# 🧑‍💼 TaskForge  
+### Enterprise Project Management System
 
-This React/Vite application provides a multi‑role project and task management interface with Firebase authentication and Firestore data storage.
+> A role-based workflow management platform for structured project tracking, task orchestration, and real-time collaboration.
 
-## Local Setup
+---
 
-1. **Install dependencies**
-   ```bash
-   npm install
-   ```
-2. **Configuration**
-   The Firebase settings live directly in `src/firebase.js`. No additional environment files are required; you can edit the object there if you need to point to a different project.
-3. **Run development server**
-   ```bash
-   npm run dev
-   ```
+## 🧠 Overview
 
-## Deployment on Vercel
+TaskForge is a full-stack project management system designed to streamline enterprise workflows across Admin, Manager, and User roles with real-time collaboration and structured task lifecycle management.
 
-1. Push your repository to GitHub (or another git provider). Vercel can import directly from Git.
-2. In the Vercel dashboard, click "New Project" ➜ select the repo.
-3. Configure the project if necessary:
-   - **Framework**: Vite (auto-detected)
-   - **Build Command**: `npm run build`
-   - **Output Directory**: `dist`
-4. Deploy – Vercel will build and publish your app, and each future push will trigger an automatic redeploy.
+---
 
-## Gitignore
+## ⚙️ Architecture
 
-There is no need for `.env.local` in this setup; the existing `.gitignore` already excludes common local files.
+Frontend (React + Vite)  
+→ Context API State Layer  
+→ Firebase Authentication  
+→ Firestore Database (Projects + Tasks Subcollections)
 
-## Notes
+---
 
-- The Firebase config is public by design; keeping it in source works fine for client apps.
-- If you ever migrate to multiple environments you can still switch to env vars later.
+## ✨ Features
 
-Happy coding!  🎉
+### 🔐 Role-Based Access Control
+- Admin, Manager, User roles
+- Secure dashboard routing per role
 
+### 🏗 Project Lifecycle Management
+- Create and manage projects
+- Assign managers
+- Status flow:
+  Active → In Review → Completed
 
+### 📋 Task Orchestration System
+- Task creation within projects
+- Assignment to users
+- Priority-based classification
+- Deadline tracking system
 
-Currently, two official plugins are available:
+### 👥 Collaboration Layer
+- Task comments system
+- Activity logging for all actions
+- Real-time updates across users
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📊 Real-Time Synchronization
+- Firebase Firestore listeners
+- Instant cross-dashboard updates
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🧩 Engineering Highlights
+- Role-based architecture (RBAC system)
+- Hierarchical Firestore data modeling
+- Real-time collaboration system
+- Event-driven workflow tracking
+- Context API state orchestration
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🧱 Tech Stack
+React, Vite, Tailwind CSS, React Router, Firebase Auth, Firebase Firestore, Lucide Icons
+
+---
+
+## 📌 Focus
+Enterprise systems • Workflow automation • Role-based architecture • Real-time collaboration
